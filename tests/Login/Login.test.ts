@@ -28,9 +28,9 @@ test.describe('[Authentication]', () => {
   test('[Authentication] Unsuccessful login – Invalid email or password', async () => {
     const { invalidUsername, invalidPassword } = testData.Login
     await login.LoginIn(invalidUsername, invalidPassword);
-    await login.InsuccessfulLogin()
+    await login.UnsuccessfulLogin()
   });
-  test('[Authentication] Logout', async () => {
+  test('[Authentication] Successful logout after login', async () => {
     const { username, password } = testData.Login;
     await login.LoginIn(username, password);
     await login.SuccessfulLogin();

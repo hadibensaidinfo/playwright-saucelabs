@@ -1,4 +1,4 @@
-import { loginAsUser } from '../../helpers/auth'; // 🟢 maintenant c’est correct
+import { loginAsUser } from '../../helpers/auth';
 import Login from '../../PageObject/Login';
 import { test } from "@playwright/test";
 import Products from "../../PageObject/Products";
@@ -9,14 +9,14 @@ dotenv.config();
 const product = new Products();
 const login = new Login();
 
-test.beforeEach("Open Browser", async () => {
+test.beforeEach("Open Browser and log in", async () => {
   await login.commun.OpenBrowser(process.env.BASE_URL!);
   await loginAsUser(login);
 });
 
 test.describe('[Products]', () => {
   const { Products } = productsData;
-  test('[Products] User is able to log in successfully', async () => {
+  test('[Products] User is able to select a product and verify it in the cart', async () => {
     await product.SelectProduct(Products);
     await product.verifySelectArticle(Products);
   });
