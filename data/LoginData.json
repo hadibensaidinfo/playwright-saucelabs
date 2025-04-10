@@ -1,0 +1,8 @@
+{
+    "Login": {
+        "username":"standard_user",
+        "invalidUsername":"secret_sauce",
+        "password":"secret_sauce",
+        "invalidPassword": "12346"
+    }
+}

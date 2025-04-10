@@ -1,0 +1,7 @@
+{
+    "products":{
+        "btnAddToCard":"//*[text()='xxxx']/ancestor::div[contains(@class,'inventory_item')]//button",
+        "icnNumberCommand":".fa-layers-counter",
+        "panier":".shopping_cart_container"
+    }
+}

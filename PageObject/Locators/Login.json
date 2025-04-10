@@ -1,0 +1,10 @@
+{
+    "Login":{
+        "inputEmail":"#user-name",
+        "inputPassword":"#password",
+        "btnLogin":"#login-button",
+        "sidButton":".bm-burger-button",
+        "sideBar":".bm-item-list",
+        "menuLogout":"#logout_sidebar_link"
+    }
+}
