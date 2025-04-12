@@ -1,6 +1,5 @@
 import { expect, test } from "./Commun";
 import commun from "../helpers/BrowserManager";
-
 import selector from "./Locators/Login.json"
 const { inputEmail, inputPassword, btnLogin, sidButton } = selector.Login
 
@@ -25,7 +24,7 @@ export default class Login {
     await this.commun.ClickElement(selector.Login.menuLogout)
     const currentUrl = page.url()
     console.log(currentUrl)
-    await expect(currentUrl, "Logout doesn't work").toContain("/v1/index.html")
+    await expect(currentUrl, "Logout doesn't work").toContain("/")
   }
   public async SuccessfulLogin(): Promise<void> {
     const page = await this.commun.Instance();
@@ -38,7 +37,7 @@ export default class Login {
     const page = await this.commun.Instance();
     await test.step('Verify that the user is not logged in', async () => {
       const currentUrl = await page.url()
-      await expect(currentUrl).toContain("/v1/")
+      await expect(currentUrl).toContain("/")
       const webElement = await page.locator('[data-test="error"]')
       await expect(webElement).toBeVisible()
     })

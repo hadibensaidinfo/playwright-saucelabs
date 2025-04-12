@@ -1,7 +1,5 @@
 import { expect, test } from "./Commun";
-
 import commun from "../helpers/BrowserManager";
-
 import selector from "./Locators/Products.json"
 const { btnAddToCard, icnNumberCommand, cart } = selector.products
 
@@ -16,7 +14,7 @@ export default class Products {
         const newbtnAddToCard = btnAddToCard.replace("xxxx", item)
         await this.commun.ClickElement(newbtnAddToCard);
         const webElement = page.locator(newbtnAddToCard)
-        await expect(webElement).toHaveText("REMOVE")
+        await expect(webElement).toHaveText("Remove")
         const numberOfCommand = page.locator(icnNumberCommand)
         await expect(numberOfCommand).toHaveText(nbrCommand.toString())
       }

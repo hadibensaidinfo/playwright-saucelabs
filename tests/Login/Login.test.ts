@@ -1,18 +1,13 @@
 import { test } from "@playwright/test";
 import Login from "../../PageObject/Login"
 import testData from '../../data/LoginData.json';
-import dotenv from 'dotenv';
-dotenv.config();
 
 
 const login = new Login();
 
 test.beforeEach("Open Browser", async () => {
-  const BASE_URL = process.env.BASE_URL;
-  if (!BASE_URL) {
-    throw new Error("BASE_URL is not defined in the environment variables.");
-  }
-  await login.commun.OpenBrowser(BASE_URL);
+  await login.commun.OpenBrowser("/");
+
 })
 test.afterAll("Close Browser", async () => {
   await login.commun.CloseBrowser()

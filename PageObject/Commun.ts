@@ -6,7 +6,7 @@ export class Commun {
 
   public async Instance(): Promise<Page> {
     if (!this.browser) {
-      this.browser = await chromium.launch({ headless: false, slowMo: 300 });
+      this.browser = await chromium.launch({ headless: false});
     }
     if (!this.page) {
       const context = await this.browser.newContext();

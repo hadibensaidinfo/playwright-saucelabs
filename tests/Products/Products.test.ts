@@ -3,14 +3,12 @@ import Login from '../../PageObject/Login';
 import { test } from "@playwright/test";
 import Products from "../../PageObject/Products";
 import productsData from '../../data/ProductsData.json';
-import dotenv from 'dotenv';
-dotenv.config();
 
 const product = new Products();
 const login = new Login();
 
 test.beforeEach("Open Browser and log in", async () => {
-  await login.commun.OpenBrowser(process.env.BASE_URL!);
+  await login.commun.OpenBrowser("/");
   await loginAsUser(login);
 });
 

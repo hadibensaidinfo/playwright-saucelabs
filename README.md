@@ -9,7 +9,6 @@ This project is an end-to-end **test automation framework** built with **Playwri
 - ✅ Based on [Playwright](https://playwright.dev/)
 - 🧱 Uses the **Page Object Model** architecture
 - 📁 Test data stored in **JSON files**
-- 🔐 Environment variables with **dotenv**
 - 🔎 Custom utility methods and reusable components
 - 📄 Rich test logging using `test.step()`
 - 📊 HTML reports support
@@ -24,6 +23,4 @@ This project is an end-to-end **test automation framework** built with **Playwri
 - Node.js
 
 ---
-
-## 📁 Project Structure
 
