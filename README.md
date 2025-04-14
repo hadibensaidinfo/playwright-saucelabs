@@ -1,6 +1,6 @@
 # 🧪 Playwright E-Commerce Automation Framework
 
-This project is an end-to-end **test automation framework** built with **Playwright**, following the **Page Object Model (POM)** pattern. Test data is managed through **JSON files**, and environment-specific configuration is handled via **`.env` variables**.
+This project is an end-to-end **test automation framework** built with **Playwright**, following the **Page Object Model (POM)** pattern. Test data is managed through **JSON files**.
 
 ---
 
